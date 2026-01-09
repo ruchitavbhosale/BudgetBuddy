@@ -6,6 +6,7 @@ import java.io.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+
 public class BudgetBuddy extends JFrame {
 
     private JTextField incomeField, expenseField;
@@ -71,6 +72,7 @@ public class BudgetBuddy extends JFrame {
 
         add(menu, BorderLayout.WEST);
 
+        
         // ================== RIGHT MAIN AREA ==================
         JPanel right = new JPanel();
         right.setLayout(new GridLayout(3, 1, 20, 20));
