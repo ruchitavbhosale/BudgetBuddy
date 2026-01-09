@@ -1,10 +1,12 @@
 package com.mycompany.budgetbuddy;
 
+
 import javax.swing.*;
 import java.awt.*;
 import java.io.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+
 
 
 public class BudgetBuddy extends JFrame {
@@ -18,6 +20,7 @@ public class BudgetBuddy extends JFrame {
     public BudgetBuddy() {
 
         // Window settings
+        
         setUndecorated(true);
         setOpacity(0f);
         setSize(1050, 650);
@@ -26,6 +29,7 @@ public class BudgetBuddy extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         // ============== TOP GRADIENT BAR ==============
+        
         JPanel top = new JPanel() {
             @Override
             protected void paintComponent(Graphics g) {
@@ -74,6 +78,7 @@ public class BudgetBuddy extends JFrame {
 
         
         // ================== RIGHT MAIN AREA ==================
+        
         JPanel right = new JPanel();
         right.setLayout(new GridLayout(3, 1, 20, 20));
         right.setBorder(BorderFactory.createEmptyBorder(25, 25, 25, 25));
@@ -128,7 +133,7 @@ public class BudgetBuddy extends JFrame {
         return tf;
     }
 
-    // ============== GLASS CARD PANEL ==============
+    // ============== GLASS CARD PANEL ============
     private JPanel createCard(String titleText, Component comp) {
         JPanel card = new JPanel(new BorderLayout());
         card.setBackground(Color.WHITE);
