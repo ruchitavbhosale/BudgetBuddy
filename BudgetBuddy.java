@@ -7,8 +7,6 @@ import java.io.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-
-
 public class BudgetBuddy extends JFrame {
 
     private JTextField incomeField, expenseField;
