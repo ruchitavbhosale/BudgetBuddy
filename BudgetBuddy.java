@@ -1,6 +1,5 @@
 package com.mycompany.budgetbuddy;
 
-
 import javax.swing.*;
 import java.awt.*;
 import java.io.*;
@@ -11,14 +10,12 @@ public class BudgetBuddy extends JFrame {
 
     private JTextField incomeField, expenseField;
     private JTextArea summaryArea;
-
     private double totalIncome = 0;
     private double totalExpense = 0;
 
     public BudgetBuddy() {
 
         // Window settings
-        
         setUndecorated(true);
         setOpacity(0f);
         setSize(1050, 650);
@@ -27,7 +24,6 @@ public class BudgetBuddy extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         // ============== TOP GRADIENT BAR ==============
-        
         JPanel top = new JPanel() {
             @Override
             protected void paintComponent(Graphics g) {
@@ -74,9 +70,7 @@ public class BudgetBuddy extends JFrame {
 
         add(menu, BorderLayout.WEST);
 
-        
         // ================== RIGHT MAIN AREA ==================
-        
         JPanel right = new JPanel();
         right.setLayout(new GridLayout(3, 1, 20, 20));
         right.setBorder(BorderFactory.createEmptyBorder(25, 25, 25, 25));
