@@ -16,6 +16,7 @@ public class BudgetBuddy extends JFrame {
     public BudgetBuddy() {
 
         // Window settings
+        
         setUndecorated(true);
         setOpacity(0f);
         setSize(1050, 650);
@@ -24,6 +25,7 @@ public class BudgetBuddy extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         // ============== TOP GRADIENT BAR ==============
+        
         JPanel top = new JPanel() {
             @Override
             protected void paintComponent(Graphics g) {
@@ -48,6 +50,7 @@ public class BudgetBuddy extends JFrame {
         add(top, BorderLayout.NORTH);
 
         // ================= LEFT SIDEBAR ==================
+        
         JPanel menu = new JPanel();
         menu.setBackground(Color.WHITE);
         menu.setLayout(new GridLayout(6, 1, 18, 18));
@@ -71,6 +74,7 @@ public class BudgetBuddy extends JFrame {
         add(menu, BorderLayout.WEST);
 
         // ================== RIGHT MAIN AREA ==================
+        
         JPanel right = new JPanel();
         right.setLayout(new GridLayout(3, 1, 20, 20));
         right.setBorder(BorderFactory.createEmptyBorder(25, 25, 25, 25));
@@ -92,6 +96,7 @@ public class BudgetBuddy extends JFrame {
         add(right, BorderLayout.CENTER);
 
         // ================= BUTTON ACTIONS =================
+        
         addIncomeBtn.addActionListener(e -> addIncome());
         addExpenseBtn.addActionListener(e -> addExpense());
         summaryBtn.addActionListener(e -> showSummary());
@@ -103,6 +108,7 @@ public class BudgetBuddy extends JFrame {
     }
 
     // ============== MODERN BLUE BUTTON ==============
+    
     private JButton createButton(String text) {
         JButton btn = new JButton(text);
         btn.setFont(new Font("SansSerif", Font.BOLD, 17));
@@ -115,6 +121,7 @@ public class BudgetBuddy extends JFrame {
     }
 
     // ============== ROUNDED INPUT FIELD ==============
+    
     private JTextField styledTextField() {
         JTextField tf = new JTextField();
         tf.setFont(new Font("SansSerif", Font.PLAIN, 18));
@@ -126,6 +133,7 @@ public class BudgetBuddy extends JFrame {
     }
 
     // ============== GLASS CARD PANEL ============
+    
     private JPanel createCard(String titleText, Component comp) {
         JPanel card = new JPanel(new BorderLayout());
         card.setBackground(Color.WHITE);
@@ -150,6 +158,7 @@ public class BudgetBuddy extends JFrame {
     }
 
     // ================= ADD INCOME =================
+    
     private void addIncome() {
         try {
             double value = Double.parseDouble(incomeField.getText().trim());
@@ -171,6 +180,7 @@ public class BudgetBuddy extends JFrame {
     }
 
     // ================= ADD EXPENSE =================
+    
     private void addExpense() {
         try {
             double value = Double.parseDouble(expenseField.getText().trim());
@@ -200,6 +210,7 @@ public class BudgetBuddy extends JFrame {
     }
 
     // ================= SUMMARY =================
+    
     private void showSummary() {
     double balance = totalIncome - totalExpense;
     double expenseRatio = (totalIncome == 0) ? 0 : (totalExpense / totalIncome) * 100;
@@ -276,6 +287,7 @@ private void styleDetailText(JLabel lbl) {
 }
 
     // ================= EXPORT =================
+    
 private void exportFile() {
     try {
         // Create a default filename with timestamp
@@ -309,6 +321,7 @@ private void exportFile() {
 }
 
     // ================= RESET =================
+    
     private void resetData() {
         totalIncome = 0;
         totalExpense = 0;
@@ -320,6 +333,7 @@ private void exportFile() {
     }
 
     // ================= SAVE TO FILE =================
+    
     private void saveToFile(String text) {
         try (FileWriter fw = new FileWriter("budget_data.txt", true)) {
             fw.write(text + "\n");
@@ -327,6 +341,7 @@ private void exportFile() {
     }
 
     // ================= LOAD FILE =================
+    
     private void loadFromFile() {
         try {
             File file = new File("budget_data.txt");
@@ -346,6 +361,7 @@ private void exportFile() {
     }
 
     // ================= FADE IN ANIMATION =================
+    
     private void fadeIn() {
         for (float i = 0; i <= 1; i += 0.03f) {
             setOpacity(i);
