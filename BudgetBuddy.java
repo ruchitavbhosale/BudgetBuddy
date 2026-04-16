@@ -341,7 +341,6 @@ private void exportFile() {
     }
 
     // ================= LOAD FILE =================
-    
     private void loadFromFile() {
         try {
             File file = new File("budget_data.txt");
