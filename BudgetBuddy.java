@@ -361,7 +361,6 @@ private void exportFile() {
     }
 
     // ================= FADE IN ANIMATION =================
-    
     private void fadeIn() {
         for (float i = 0; i <= 1; i += 0.03f) {
             setOpacity(i);
