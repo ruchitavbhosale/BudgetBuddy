@@ -210,7 +210,6 @@ public class BudgetBuddy extends JFrame {
     }
 
     // ================= SUMMARY =================
-    
     private void showSummary() {
     double balance = totalIncome - totalExpense;
     double expenseRatio = (totalIncome == 0) ? 0 : (totalExpense / totalIncome) * 100;
